@@ -1,0 +1,68 @@
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+	int n,i;
+	int rear=-1;
+	int front=-1;
+	int queue[5];
+	int choice=5;
+	while(choice!=4)
+	{
+		
+		cout<<"\nEnter 1. For Insertion";
+		cout<<"\nEnter 2. For Deletion";
+		cout<<"\nEnter 3. For Display";
+		cout<<"\nEnter 4. For Exit\n";
+		cin>>choice;
+		switch(choice)
+		{
+			case 1:
+				if(front==rear&& front==4)
+				{
+				
+					cout<<"\nQueue Overflow";
+					
+				
+				}
+				else if(front==rear && rear==-1)
+				{
+					front=rear=0;
+					cout<<"\nEnter element:";
+					cin>>n;
+					queue[++rear]=n;
+				}
+				else
+				{
+					cout<<"\nEnter element:";
+					cin>>n;
+					queue[++rear]=n;
+				}
+				break;
+			case 2:
+				if(front==-1)
+					cout<<"\nQueue Underflow";
+				else
+				{
+					front++; 
+				}
+				break;
+			case 3:
+				
+				
+				for(i=front;i<=rear;i++)
+				{
+					if(queue[i]==-1)
+						cout<<"Empty\n";
+					cout<<queue[i]<<"  ";
+				}
+				break;
+			default:
+				cout<<"Invalid Choice";
+			}
+		
+		
+		
+		}
+	}
