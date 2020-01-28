@@ -1,0 +1,28 @@
+
+//area=400 rectange breadth = 4 and triangle height = 10 find largest perimeter
+#include<iostream>
+#include<math.h>
+using namespace std;
+
+int main(void)
+{
+	int area=400;
+	int r_breadth=4;
+	int r_length=area/r_breadth;
+	int t_height=10;
+	int t_base=(2*area)/t_height;
+	int t_side=(t_height^2+t_base^2)^(1/2);	
+	int s_side=sqrt(area);
+	int r_Peri=2*(r_length+r_breadth);
+	int s_Peri=4*s_side;
+	int t_Peri=t_height+t_base+t_side;
+
+	if(r_Peri>s_Peri && r_Peri>t_Peri)
+		cout<<"\nThe rectangle has the largest parameter";
+	else if(s_Peri>r_Peri &&s_Peri>t_Peri)
+		cout<<"\nThe side has largest Parameter";
+		
+	else
+		cout<<"\nThe triangle has the largest parameter";
+	     
+}
