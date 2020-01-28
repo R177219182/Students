@@ -1,0 +1,26 @@
+#import <iostream>
+#import <math.h>
+using namespace std;
+
+class circle
+{
+	public:
+	int r;
+	circle(int r1)
+	{
+		r=r1;
+	}
+	void Area()
+	{
+	
+	float area=3.14*r*r;
+	cout<<"Area = "<<area;
+	}
+};
+
+
+int main(void)
+{
+	circle obj=circle(7);
+	obj.Area();
+}
