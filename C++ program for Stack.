@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+
+int main(void)
+{
+	int n,i;
+	int top=-1;
+	int stack[5];
+	int choice=5;
+	while(choice!=4)
+	{
+		
+		cout<<"\nEnter 1. For Insertion";
+		cout<<"\nEnter 2. For Deletion";
+		cout<<"\nEnter 3. For Display";
+		cout<<"\nEnter 4. For Exit";
+		cin>>choice;
+		switch(choice)
+		{
+			case 1:
+				if(top==4)
+				{
+				
+					cout<<"\nStack Overflow";
+				
+				}
+				else
+				{
+				
+					cout<<"\nEnter element:";
+					cin>>n;
+					stack[++top]=n;
+				}
+				break;
+			case 2:
+				if(top==-1)
+					cout<<"\nStack Underflow";
+				else
+				{
+					top--; 
+				}
+				break;
+			case 3:
+				for(i=0;i<5;i++)
+				{
+					cout<<stack[top];
+				}
+				break;
+			default:
+				cout<<"Invalid Choice";
+			}
+		cout<<"\nEnter 1. For Insertion";
+		cout<<"\nEnter 2. For Deletion";
+		cout<<"\nEnter 3. For Display";
+		cout<<"\nEnter 4. For Exit";
+		
+		
+		}
+	}
